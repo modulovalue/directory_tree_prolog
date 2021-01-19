@@ -1,7 +1,9 @@
-directoryTree(ROOT, OUT2) :-
+% Call directoryTree(entity, OUTPUTLIST).
+
+directoryTree(ROOT, OUT) :-
     directoryTreeChildName(ROOT, NAME),
     directoryTreeChildrenOrEmpty(ROOT, CHILDREN),
-    directoryTree_(CHILDREN, '', [NAME], OUT2).
+    directoryTree_(CHILDREN, '', [NAME], OUT).
     
 directoryTree_([VALUE], PREFIX, IN, OUT1) :- 
     addPrefix(VALUE, PREFIX, "┗━ ", IN, OUT),
