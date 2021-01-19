@@ -1,6 +1,6 @@
 # Prolog directory tree
 
-A prolog pretty printer for trees.
+A prolog pretty printer for directory trees.
 
 ```
 Entity
@@ -20,6 +20,3 @@ Entity
 . ┃ ┗━ Integer
 . ┗━ Null
 ```
-
-
-_Prolog?! Yes Prolog!_
