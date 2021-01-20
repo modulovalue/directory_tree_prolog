@@ -4,7 +4,6 @@
  • Call directoryTreePreview to view an example.
  • See below at the Dataset registry for how to add new datasets.
  • See below at the Symbol registry for how to add new symbols. 
- • Note: Using Dart underscore notation to denote private predicates.
  • Note: append is redefined for a custom prolog interpreter that doesn't have many builtins.
  • Repo: https://github.com/modulovalue/directory_tree_prolog
 */
