@@ -47,11 +47,6 @@ asciiSymbols([_,_|_], '|  ', '|- ').
 datasetRegistry(testData1, A, B, C) :- testData1(A, B, C).
 datasetRegistry(testData2, A, B, C) :- testData2(A, B, C). 
 % Test dataset 1.
-testData2(X, X, DATA) :- testData2_(X, DATA).
-testData2(X, X, []) :- not(testData2_(X, _)).
-testData2_('Root', ['Child 1', 'Child 2', 'Child 3']).
-testData2_('Child 1', ['Child 11', 'Child 12', 'Child 13']).
-% Test dataset 2. 
 testData1(ROOT, NAME, CHILDREN) :-
     directoryTreeChildName(ROOT, NAME),
     directoryTreeChildrenOrEmpty(ROOT, CHILDREN).
@@ -77,3 +72,8 @@ directoryTreeChildName(number, 'Number').
 directoryTreeChildName(double, 'Double').
 directoryTreeChildName(integer, 'Integer').
 directoryTreeChildName(null, 'Null').
+% Test dataset 2. 
+testData2(X, X, DATA) :- testData2_(X, DATA).
+testData2(X, X, []) :- not(testData2_(X, _)).
+testData2_('Root', ['Child 1', 'Child 2', 'Child 3']).
+testData2_('Child 1', ['Child 11', 'Child 12', 'Child 13']).
