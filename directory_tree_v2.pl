@@ -15,7 +15,7 @@ directoryTree_([H|T], P, IN, DATASET, SYMBOLS, OUT2) :-
     symbolRegistry(SYMBOLS, [H|T], PAD, INDICATE),
     datasetRegistry(DATASET, H, NAME, CHILDREN),
     append_(IN, P, INP),
-    append(P, [PAD], PREFIXLIST2),
+    append_(P, [PAD], PREFIXLIST2),
     append_(INP, [INDICATE, NAME, '\n'], OUT),
     directoryTree_(CHILDREN, PREFIXLIST2, OUT, DATASET, SYMBOLS, OUT1),
     directoryTree_(T, P, OUT1, DATASET, SYMBOLS, OUT2).
